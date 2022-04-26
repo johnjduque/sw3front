@@ -1,1 +1,36 @@
-<p>persona works!</p>
+<div class="formularioPersona">
+  <h2>Formulario de Postulación</h2>
+  <form [formGroup]="personaForm" (ngSubmit)="guardar( )">
+    <div class="form-group">
+      <label>Documento de Identidad: </label>
+      <input type="number" formControlName="documentoIdentidad" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Primer Nombre: </label>
+      <input type="text" formControlName="primerNombre" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Segundo Nombre: </label>
+      <input type="checkbox" formControlName="segundoNombre" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Primer Apellido: </label>
+      <input type="text" formControlName="primerApellido" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Segundo Apellido: </label>
+      <input type="text" formControlName="segundoApellido" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Fecha de Nacimiento: </label>
+      <input type="text" formControlName="fechaNacimiento" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>Ingreso Mensual: </label>
+      <input type="number" formControlName="ingresoMensual" class="form-control">
+    </div>
+
+    <button [disabled]="personaForm.invalid" type="submit" class="btn btn-primary">Guardar</button>
+
+  </form>
+</div>

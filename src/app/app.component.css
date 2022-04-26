@@ -2,4 +2,11 @@
   padding-left: 30%;
   padding-right: 20%;
   margin-top: 10%;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.h1 {
+  min-height: 4rem;
+  background-color: #03d6fb;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
 }
