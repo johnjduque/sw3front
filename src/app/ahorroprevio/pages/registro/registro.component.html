@@ -1,1 +1,20 @@
-<p>ahorroprevio works!</p>
+<div class="ahorroPrevioRegistro">
+  <h2>Ingresar el valor del ahorro</h2>
+  <form [formGroup]="ahorroPrevioForm" (ngSubmit)="guardar( )">
+    <div class="form-group">
+      <label>cuenta Ahorro Programado: </label>
+      <input type="number" formControlName="cuentaAhorroProgramado" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>cesantias: </label>
+      <input type="number" formControlName="cesantias" class="form-control">
+    </div>
+    <div class="form-group">
+      <label>subsidio Caja Compesacion: </label>
+      <input type="number" formControlName="subsidioCajaCompesacion" class="form-control">
+    </div>
+
+    <button [disabled]="ahorroPrevioForm.invalid" type="submit" class="btn btn-primary">Guardar</button>
+
+  </form>
+</div>
