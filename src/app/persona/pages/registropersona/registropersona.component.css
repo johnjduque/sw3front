@@ -1,8 +1,8 @@
-.ahorroPrevioRegistro {
+.personaRegistro {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 380px;
-  max-width: 380px;
-  margin: 0 auto;
+  width: 450px;
+  max-width: 450px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;

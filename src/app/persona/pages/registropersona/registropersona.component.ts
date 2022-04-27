@@ -3,17 +3,14 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { PersonaService } from 'src/app/services/persona/persona.service';
 
 @Component({
-  selector: 'app-registro',
-  templateUrl: './registro.component.html',
-  styleUrls: ['./registro.component.css'],
+  selector: 'app-registropersona',
+  templateUrl: './registropersona.component.html',
+  styleUrls: ['./registropersona.component.css'],
 })
-export class RegistroComponent implements OnInit {
+export class RegistroPersonaComponent implements OnInit {
   personaForm!: FormGroup;
 
-  constructor(
-    public fb: FormBuilder,
-    public personaService: PersonaService
-  ) {}
+  constructor(public fb: FormBuilder, public personaService: PersonaService) {}
 
   ngOnInit(): void {
     this.personaForm = this.fb.group({
@@ -27,5 +24,12 @@ export class RegistroComponent implements OnInit {
     });
   }
 
-  guardar(): void {}
+  guardar(): void {
+    this.personaService.savePersona(this.personaForm.value).subscribe(
+      (resp) => {},
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
 }

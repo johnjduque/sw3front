@@ -23,5 +23,14 @@ export class RegistroComponent implements OnInit {
     });
   }
 
-  guardar(): void {}
+  guardar(): void {
+    this.ahorroprevioService
+      .saveAhorroPrevio(this.ahorroPrevioForm.value)
+      .subscribe(
+        (resp) => {},
+        (error) => {
+          console.error(error);
+        }
+      );
+  }
 }

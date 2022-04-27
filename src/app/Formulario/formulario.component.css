@@ -1,12 +1,18 @@
-.ahorroPrevioRegistro {
+.formularioRegistro {
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-  width: 380px;
-  max-width: 380px;
+  width: 550px;
+  max-width: 550px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: left;
+}
+
+.h1 {
+  min-height: 4rem;
+  background-color: #03d6fb;
+  box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
 }
 
 .h2 {
@@ -15,14 +21,11 @@
   box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 5%), inset 0 -1px 0 rgb(0 0 0 / 10%);
 }
 
-.button {
-  background: #080;
-  color: #fff;
-  padding: 5px 15px;
-  border-radius: 5px;
-  border: thin solid #060;
+.check {
+  width: 20px;
+  height: 20px;
 }
 
-.button:hover {
-  background: #0a0;
+th {
+  width: 50px;
 }

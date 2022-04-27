@@ -1,20 +1,24 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { RegistroComponent } from './ahorroprevio/pages/registro/registro.component';
+import { FormularioComponent } from './Formulario/formulario.component';
+import { RegistroPersonaComponent } from './persona/pages/registropersona/registropersona.component';
 
 const routes: Routes = [
   {
     path: 'persona',
-    loadChildren: () =>
-      import('./persona/persona.module').then((module) => module.PersonaModule),
+    component: RegistroPersonaComponent,
   },
 
   {
     path: 'ahorroprevio',
-    loadChildren: () =>
-      import('./ahorroprevio/ahorroprevio.module').then(
-        (module) => module.AhorroprevioModule
-      ),
+    component: RegistroComponent,
   },
+  {
+    path: 'formulario',
+    component: FormularioComponent,
+  },
+  { path: '**', pathMatch: 'full', redirectTo: 'formulario' },
 ];
 
 @NgModule({
