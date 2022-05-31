@@ -1,20 +1,23 @@
-<div class="ahorroPrevioRegistro">
-  <h2 class="h2">Ingresar el valor del ahorro</h2>
-  <form [formGroup]="ahorroPrevioForm" (ngSubmit)="guardar( )">
-    <div class="form-group">
+<header class="header">
+  <div class="ahorroPrevioRegistro">
+    <h2 class="h2">Ingresar el valor del ahorro</h2>
+    <form [formGroup]="ahorroPrevioForm" (ngSubmit)="guardar( )">
+      <div class="form-group">
+        <br>
+        <label>Cuenta Ahorro Programado: </label>
+        <input type="number" formControlName="cuentaAhorroProgramado" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Cesantias: </label>
+        <input type="number" formControlName="cesantias" class="form-control">
+      </div>
+      <div class="form-group">
+        <label for="name">Subsidio Caja Compesacion</label>
+        <input type="number" formControlName="subsidioCajaCompesacion" class="form-control">
+      </div>
       <br>
-      <label>Cuenta Ahorro Programado: </label>
-      <input type="number" formControlName="cuentaAhorroProgramado" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Cesantias: </label>
-      <input type="number" formControlName="cesantias" class="form-control">
-    </div>
-    <div class="form-group">
-      <label for="name">Subsidio Caja Compesacion</label>
-      <input type="number" formControlName="subsidioCajaCompesacion" class="form-control">
-    </div>
-    <br>
-    <button [disabled]="ahorroPrevioForm.invalid" type="submit" class="btn btn-primary" class="button">Guardar</button>
-  </form>
-</div>
+      <button [disabled]="ahorroPrevioForm.invalid" type="submit" class="btn btn-primary"
+        class="button">Guardar</button>
+    </form>
+  </div>
+</header>

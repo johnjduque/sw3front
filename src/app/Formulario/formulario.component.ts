@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { AhorroprevioService } from '../services/ahorroprevio/ahorroprevio.service';
 import { FormularioService } from '../services/formulario/formulario.service';
 
 @Component({
@@ -31,5 +30,12 @@ export class FormularioComponent implements OnInit {
     });
   }
 
-  guardar(): void {}
+  guardar(): void {
+    this.formularioService.saveFormulario(this.formularioForm.value).subscribe(
+      (resp) => {},
+      (error) => {
+        console.error(error);
+      }
+    );
+  }
 }

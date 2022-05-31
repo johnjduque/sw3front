@@ -2,7 +2,7 @@
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 380px;
   max-width: 380px;
-  margin: 0 auto;
+  margin-left: 1100px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -25,4 +25,13 @@
 
 .button:hover {
   background: #0a0;
+}
+
+.header {
+  background-image: url("/assets/imagenes/AhorroB.PNG");
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

@@ -1,38 +1,40 @@
-<div class="personaRegistro">
-  <h2 class="h2">Información miembro del hogar</h2>
-  <form [formGroup]="personaForm" (ngSubmit)="guardar( )">
-    <div class="form-group">
+<header class="header">
+  <div class="personaRegistro">
+    <h2 class="h2">Información miembro del hogar</h2>
+    <form [formGroup]="personaForm" (ngSubmit)="guardar( )">
+      <div class="form-group">
+        <br>
+        <label>Documento de Identidad: </label>
+        <input type="number" formControlName="documentoIdentidad" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Primer Nombre: </label>
+        <input type="text" formControlName="primerNombre" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Segundo Nombre: </label>
+        <input type="text" formControlName="segundoNombre" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Primer Apellido: </label>
+        <input type="text" formControlName="primerApellido" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Segundo Apellido: </label>
+        <input type="text" formControlName="segundoApellido" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Fecha de Nacimiento (dd/mm/aaaa): </label>
+        <input type="text" formControlName="fechaNacimiento" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Ingreso Mensual: </label>
+        <input type="number" formControlName="ingresoMensual" class="form-control">
+      </div>
       <br>
-      <label>Documento de Identidad: </label>
-      <input type="number" formControlName="documentoIdentidad" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Primer Nombre: </label>
-      <input type="text" formControlName="primerNombre" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Segundo Nombre: </label>
-      <input type="text" formControlName="segundoNombre" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Primer Apellido: </label>
-      <input type="text" formControlName="primerApellido" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Segundo Apellido: </label>
-      <input type="text" formControlName="segundoApellido" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Fecha de Nacimiento (dd/mm/aaaa): </label>
-      <input type="text" formControlName="fechaNacimiento" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Ingreso Mensual: </label>
-      <input type="number" formControlName="ingresoMensual" class="form-control">
-    </div>
-    <br>
 
-    <button [disabled]="personaForm.invalid" type="submit" class="btn btn-primary" class="button">Guardar</button>
+      <button [disabled]="personaForm.invalid" type="submit" class="btn btn-primary" class="button">Guardar</button>
 
-  </form>
-</div>
+    </form>
+  </div>
+</header>

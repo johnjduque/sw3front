@@ -1,0 +1,16 @@
+<div class="login">
+  <form class="custom-form" [formGroup]="loginForm" (ngSubmit)="onLogin(loginForm.value)">
+    <h1>Login</h1>
+    <br>
+    <label>usuario:</label>
+    <input type="text" id="usuario" name="usuario" formControlName="usuario" placeholder="usuario"
+      required="required" />
+    <label>contraseña:</label>
+    <input type="text" id="clave" name="clave" placeholder="clave" formControlName="clave" required="required" />
+    <button type="submit" value="Log In">Login</button>
+  </form>
+
+  <div class="alert alert-danger" *ngIf="errorStatus">
+    <p>{{ errorMsj }}</p>
+  </div>
+</div>

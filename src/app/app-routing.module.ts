@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { RegistroComponent } from './ahorroprevio/pages/registro/registro.component';
 import { FormularioComponent } from './Formulario/formulario.component';
 import { RegistroPersonaComponent } from './persona/pages/registropersona/registropersona.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -18,7 +20,15 @@ const routes: Routes = [
     path: 'formulario',
     component: FormularioComponent,
   },
-  { path: '**', pathMatch: 'full', redirectTo: 'formulario' },
+  {
+    path: 'login',
+    component: LoginComponent,
+  },
+  {
+    path: 'home',
+    component: HomeComponent,
+  },
+  { path: '**', pathMatch: 'full', redirectTo: 'home' },
 ];
 
 @NgModule({

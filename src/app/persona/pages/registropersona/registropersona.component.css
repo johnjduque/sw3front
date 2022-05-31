@@ -1,11 +1,11 @@
 .personaRegistro {
+  margin-left: 1100px;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   width: 450px;
   max-width: 450px;
-  margin: auto;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-items: left;
 }
 
@@ -25,4 +25,13 @@
 
 .button:hover {
   background: #0a0;
+}
+
+.header {
+  background-image: url("/assets/imagenes/Persona.PNG");
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
 }

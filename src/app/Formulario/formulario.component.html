@@ -1,49 +1,52 @@
-<div class="formularioRegistro">
-  <h1 class="h1">Formulario de Postulación</h1>
-  <h2 class="h2">Ingresar Información de Postulación</h2>
-  <form [formGroup]="formularioForm" (ngSubmit)="guardar( )">
-    <div class="form-group">
-      <br>
-      <label>Personas: </label>
-      <a [routerLink]="['/persona']" routerLinkActive="router-link-active" target="_blank">
+<header class="header">
+  <div class="formularioRegistro">
+    <h1 class="h1">Formulario de Postulación</h1>
+    <h2 class="h2">Ingresar Información de Postulación</h2>
+    <form [formGroup]="formularioForm" (ngSubmit)="guardar( )">
+      <div class="form-group">
         <br>
-        Ingresar Integrantes del Hogar</a>
-    </div>
-    <div class="form-group">
-      <label>Clasificación Sisbén: </label>
-      <input type="text" formControlName="clasificacionSisben" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Correo Electrónico: </label>
-      <input type="text" formControlName="correoElectronico" class="form-control">
-    </div>
-    <div class="form-group">
-      <label>Ahorro Previo: </label>
-      <a [routerLink]="['/ahorroprevio']" routerLinkActive="router-link-active" target="_blank">
+        <label>Personas: </label>
+        <a [routerLink]="['/persona']" routerLinkActive="router-link-active">
+          <br>
+          Ingresar Integrantes del Hogar</a>
+      </div>
+      <div class="form-group">
+        <label>Clasificación Sisbén: </label>
+        <input type="text" formControlName="clasificacionSisben" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Correo Electrónico: </label>
+        <input type="text" formControlName="correoElectronico" class="form-control">
+      </div>
+      <div class="form-group">
+        <label>Ahorro Previo: </label>
+        <a [routerLink]="['/ahorroprevio']" routerLinkActive="router-link-active">
+          <br>
+          Ingresar Ahorro<br></a>
         <br>
-        Ingresar Ahorro<br></a>
-      <br>
+        <div class="form-group">
+          <tr>
+            <th><input type="checkbox" formControlName="poseeDerechosDePropiedad" class="form-control" class="check">
+            </th>
+            <label>¿Posee derechos de Propiedad?: </label>
+          </tr>
+        </div>
+      </div>
       <div class="form-group">
         <tr>
-          <th><input type="checkbox" formControlName="poseeDerechosDePropiedad" class="form-control" class="check"></th>
-          <label>¿Posee derechos de Propiedad?: </label>
+          <th><input type="checkbox" formControlName="aceptoAvisoDePrivacidad" class="form-control" class="check"></th>
+          <label>Acepto tratamiento de datos personales: </label>
         </tr>
       </div>
-    </div>
-    <div class="form-group">
-      <tr>
-        <th><input type="checkbox" formControlName="aceptoAvisoDePrivacidad" class="form-control" class="check"></th>
-        <label>Acepto tratamiento de datos personales: </label>
-      </tr>
-    </div>
-    <div class="form-group">
-      <tr>
-        <th><input type="checkbox" formControlName="aceptoJuramento" class="form-control" class="check"></th>
-        <label>Acepto Juramento: </label>
-      </tr>
-    </div>
-    <br>
-    <button [disabled]="formularioForm.invalid" type="submit" class="btn btn-primary" class="button">Guardar</button>
+      <div class="form-group">
+        <tr>
+          <th><input type="checkbox" formControlName="aceptoJuramento" class="form-control" class="check"></th>
+          <label>Acepto Juramento: </label>
+        </tr>
+      </div>
+      <br>
+      <button [disabled]="formularioForm.invalid" type="submit" class="btn btn-primary" class="button">Guardar</button>
 
-  </form>
-</div>
+    </form>
+  </div>
+</header>

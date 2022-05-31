@@ -1,0 +1,30 @@
+.header {
+  background-image: url("/assets/imagenes/Fondo.jpg");
+  height: 100vh;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.information {
+  padding: 15px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  height: 95vh;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+}
+
+.button {
+  margin-left: 200px;
+  background: #080;
+  color: rgb(255, 255, 255);
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: thin solid #060;
+}
+
+.button:hover {
+  background: #0a0;
+}
